@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include <string.h>
-#include <GLFW/glfw3.h>
+#include <GLFW/glfw3.h> // You might need to edit this include statement in order for it to suit your include path
 
 void copyToClipboard(const char* str) {
     if (!glfwInit()) {
