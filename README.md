@@ -51,7 +51,7 @@ Replace /path/to/cloned/repo with the actual path to the cloned repository.
 This will allow you to run the program from any directory in the terminal.
 
 ## Usage
-        SPGL <length> // will generate password of length immediately 
-        SPGL // will ask you for the length
+    SPGL <length> // will generate password of length immediately 
+    SPGL // will ask you for the length
 + Once you run the program, it will ask you for the length of the password to be generated if not already given as an argument.
 + After generating the password, the program will copy it to your clipboard automatically.
