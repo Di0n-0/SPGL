@@ -31,15 +31,21 @@ char* randomChar(){
   return c;
 }
 
-int main(){ 
+int main(int argc, char **argv){ 
   srand(time(NULL));
-
   int length = 16;
-  printf("\n\n Length: \t"); 
-  if(scanf("%d", &length) != 1) length = 16;
+  if(argc == 1){
+    printf("\n\n Length: \t"); 
+    if(scanf("%d", &length) != 1) length = 16;
+  }else{
+    int tempLenght = 0;
+    for (int i = 1; i < argc; i++){
+      tempLenght += atoi(argv[i]);
+    }
+    length = tempLenght;
+  }
   char password[length];
-
-  for(int i = 0; i < length; i++){
+   for(int i = 0; i < length; i++){
     char* recievedChar = randomChar();
     password[i] = *recievedChar;
     free(recievedChar); 
